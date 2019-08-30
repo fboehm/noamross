@@ -46,21 +46,13 @@
   <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}
 " />
 
-  <meta name="twitter:card" content="{{ if .Params.largeimage }}summary_large_image{{ else }}summary{{ end }}">
-  <meta name="twitter:url" content="{{ .Permalink }}">
-  <meta name="twitter:title" content="{{ .Title }}">
-  <meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}">
-  <meta name="twitter:image" content="{{ $asset_base }}assets/{{ if .Params.largeimage }}{{ .Params.largeimage }}}{{ else if .Params.image }}{{.Params.image }}{{ else }}img/nr.png{{ end }}">
-  <meta name="twitter:site" content="noamross.net">
-  <meta name="twitter:creator" content="@noamross">
-
   <meta property="og:title" content="{{ .Title }}" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:site_name" content="noamross.net" />
+  <meta property="og:site_name" content="Frederick Boehm's website" />
   <meta property="og:description" content="  {{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}" />
   <meta property="og:url" content="{{ .Permalink }}" />
   <script type="application/ld+json">
-    {"@type":"WebSite","url":"{{ .Permalink }}","headline":"{{ .Title }}", "name":"noamross.net","description":"{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}","@context":"http://schema.org"}
+    {"@type":"WebSite","url":"{{ .Permalink }}","headline":"{{ .Title }}", "name":"Frederick Boehm's website","description":"{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}","@context":"http://schema.org"}
   </script>
 
   <!-- Indexing -->
