@@ -2,6 +2,10 @@
 {{ if ne (getenv "HUGO_ASSET_BASEURL") "" }}
   {{ $asset_base = (getenv "HUGO_ASSET_BASEURL") }}
 {{ end }}
+
+{{ template "_internal/google_analytics.html" . }}
+
+
 <footer id="footer" class="is-hidden-print">
   <div class="wrapper">
     <div class="is-row .is-small is-muted">
