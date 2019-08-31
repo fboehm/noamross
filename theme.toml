@@ -2,10 +2,10 @@
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
 name = "noamross"
-license = "MIT" + file LICENSE.md
+license = "MIT + file LICENSE.md"
 licenselink = "https://github.com/fboehm/noamross/blob/master/LICENSE.md"
 description = ""
-homepage = "http://example.com/"
+homepage = ""
 tags = []
 features = []
 min_version = "0.41"

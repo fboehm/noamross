@@ -1,6 +1,12 @@
+{{ $asset_base := .Site.BaseURL }}
+{{ if ne (getenv "HUGO_ASSET_BASEURL") "" }}
+  {{ $asset_base = (getenv "HUGO_ASSET_BASEURL") }}
+{{ end }}
+
+
 <form method="get" action="https://duckduckgo.com/">
-      <input type="search" name="q" maxlength="255" placeholder="Search noamross.net">
-      <input type="hidden" name="sites" value="www.noamross.net" />
+      <input type="search" name="q" maxlength="255" placeholder="Search my site"/>
+      <input type="hidden" name="sites" value= "{{ $asset_base }}"/>
       <input type="hidden" name="ka" value="Alegreya" />
       <input type="hidden" name="k7" value="#faf8f8" />
       <input type="hidden" name="kj" value="#b33" />
