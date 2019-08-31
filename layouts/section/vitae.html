@@ -54,6 +54,15 @@
          {{ end }}
        </ul>
 
+       <h2>Honors and Awards</h2>
+        <ul class="fa-ul">
+         {{ range sort .Site.Data.honors "date" "desc" }}
+           {{ partial "work.html" .}}
+         {{ end }}
+       </ul>
+
+
+
        <h2>Presentations</h2>
         <ul class="fa-ul">
          {{ range sort .Site.Data.presentations "date" "desc" }}
