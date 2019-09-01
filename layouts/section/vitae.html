@@ -77,6 +77,13 @@
           {{ range sort .Site.Data.papers "date" "desc" }}
             {{ partial "work.html" .}}
           {{ end }}
+        <h2>Service</h2>
+        <ul class="fa-ul">
+         {{ range sort .Site.Data.service "start_date" "desc" }}
+           {{ partial "work.html" .}}
+         {{ end }}
+       </ul>
+
         </ul>
       </div>
 

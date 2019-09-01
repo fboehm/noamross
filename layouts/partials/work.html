@@ -24,7 +24,12 @@ doi:<a href="https://dx.doi.org/{{.doi}}">{{ .doi }}</a>
   <i class="fa-li fas fa-box fa-fw"></i>
    <strong>{{ .description }}</strong>, {{ .source }} ({{ dateFormat "2006" .date }})
 
+{{ else if eq .type "service" }}
+  <i class="fa-li fas fa-box fa-fw"></i>
+   <strong>{{ .description }}</strong>, {{ .source }} ({{if isset . "date" }}{{ dateFormat "January 2006" .date }}{{ end }} {{if isset . "start_date" }}{{ dateFormat "January 2006" .start_date }} to {{ dateFormat "January 2006" .end_date }} {{ end }})
+
 {{ end }}
+
 {{if isset . "long_description" }}
   &nbsp;<a data-kube="toggle" data-target="#desc-{{ .name }}" class="is-hidden-print"><i class="fas fa-angle-down fa-fw"></i></a>
   <div id="desc-{{ .name }}" class="is-hidden"><em>{{ .long_description | markdownify }}</em></div>
