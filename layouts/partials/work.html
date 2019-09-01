@@ -22,7 +22,7 @@ doi:<a href="https://dx.doi.org/{{.doi}}">{{ .doi }}</a>
    {{if isset . "exurl" }}&nbsp;<a href="{{ .exurl }}" class="is-smaller"><i class="fas fa-link fa-fw"></i></a>{{ end }}
 {{ else if eq .type "honor" }}
   <i class="fa-li fas fa-box fa-fw"></i>
-   <strong>{{ .description }}</strong> ({{ dateFormat "2006" .date }})
+   <strong>{{ .description }}</strong>, {{ .source }} ({{ dateFormat "2006" .date }})
 
 {{ end }}
 {{if isset . "long_description" }}
