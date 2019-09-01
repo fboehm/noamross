@@ -20,6 +20,10 @@ doi:<a href="https://dx.doi.org/{{.doi}}">{{ .doi }}</a>
    {{if isset . "github" }}&nbsp;<a href="{{ .github }}" class="is-smaller"><i class="fab fa-github fa-fw"></i></a>{{ end }}
    {{if isset . "cran" }}&nbsp;<a href="{{ .github }}" class="is-smaller"><i class="fab fa-r-project fa-fw"></i></a>{{ end }}
    {{if isset . "exurl" }}&nbsp;<a href="{{ .github }}" class="is-smaller"><i class="fas fa-link fa-fw"></i></a>{{ end }}
+{{ else if eq .type "honor" }}
+  <i class="fa-li fas fa-box fa-fw"></i>
+   <strong>{{ .description }}</strong> ({{ dateFormat "2006" .date }})
+
 {{ end }}
 {{if isset . "long_description" }}
   &nbsp;<a data-kube="toggle" data-target="#desc-{{ .name }}" class="is-hidden-print"><i class="fas fa-angle-down fa-fw"></i></a>
