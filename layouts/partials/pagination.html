@@ -1,4 +1,4 @@
-{{ $paginator := .Paginate (where .Site.RegularPages "Section" "in" (slice "blog")) 5 }}
+{{ $paginator := .Paginate (where .Site.RegularPages "Section" "in" (slice "blogs")) 5 }}
 
 {{ if or ($paginator.HasPrev) ($paginator.HasNext) }}
 <nav class="pagination" role="pagination">
