@@ -19,7 +19,8 @@
           <div class="is-row is-stack-20">
             <h2 class="is-center">Blog</h2>
           </div>
-          {{ range first 5 ((where .Data.Pages.ByDate "Section" "blog").Reverse) }}
+
+          {{ range first 5 ((where .Site.RegularPages.ByDate "Section" "blog").Reverse) }}
           <div class="is-row is-stack-20">
             <div class="is-col is-33 dateblock">
               <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
