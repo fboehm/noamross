@@ -98,7 +98,7 @@ form, input[type="search"], select[multiple="multiple"] {
 h1, h2, h3, h4, h5 {
   font-family: 'IM Fell English', 'Trebuchet MS', Helvetica, Arial, sans-serif;
   font-style: normal;
-  color: #b24;
+  color: #2a52be;
   font-weight: normal;
 
 }
@@ -115,11 +115,11 @@ h2, h3 {
 }
 
 .label-red {
-  background-color: #b24;
+  background-color: #2a52be;
 }
 
 a {
-  color: #b24;
+  color: #2a52be;
   text-decoration: none;
 }
 
