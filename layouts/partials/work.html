@@ -1,6 +1,8 @@
 <li class="is-inset-bottom-4">
 {{ if eq .type "paper"}}
-<i class="fa-li fa fa-scroll fa-fw"></i>{{ delimit .authors ", " " and "}} ({{ dateFormat "2006" .date }}{{ if .preprint}}, preprint{{ end }}) <strong>{{ .title }}</strong>.
+<i class="fa-li fa fa-scroll fa-fw"></i><strong>{{ .title }}</strong>.
+{{ .container_title }}.
+{{ delimit .author ", " " and "}} ({{ dateFormat "2006" .date }}{{ if .preprint}}, preprint{{ end }})
 doi:<a href="https://dx.doi.org/{{.doi}}">{{ .doi }}</a>
 {{ else if eq .type "course" }}
   <i class="fa-li fas fa-school fa-fw"></i>

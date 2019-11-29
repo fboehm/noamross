@@ -1,5 +1,6 @@
 body {
   counter-reset: sidenote-counter;
+  color: #2a52be;
 }
 
 .sidenote,
