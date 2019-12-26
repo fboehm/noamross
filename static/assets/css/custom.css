@@ -4,11 +4,13 @@
   color: blue;
 } */
 
-[class^="fa"], [class^="ai"] {
+[class^="ai"] {
   color: green;
 }
 
-
+[class^="fa"] {
+  color: green;
+}
 
 
 
