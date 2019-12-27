@@ -22,11 +22,11 @@ doi:<a href="https://dx.doi.org/{{.doi}}">{{ .doi }}</a>
    {{if isset . "cran" }}&nbsp;<a href="{{ .cran }}" class="is-smaller"><i class="fab fa-r-project fa-fw"></i></a>{{ end }}
    {{if isset . "exurl" }}&nbsp;<a href="{{ .exurl }}" class="is-smaller"><i class="fas fa-link fa-fw"></i></a>{{ end }}
 {{ else if eq .type "honor" }}
-<i class="fas fa-award"></i>
+<i class="fa-li fas fa-award fa-fw"></i>
 <strong>{{ .description }}</strong>, {{ .source }} ({{ dateFormat "2006" .date }})
 
 {{ else if eq .type "service" }}
-<i class="fas fa-hand-point-right"></i>   <strong>{{ .description }}</strong>, {{ .source }} ({{if isset . "date" }}{{ dateFormat "January 2006" .date }}{{ end }} {{if isset . "start_date" }}{{ dateFormat "January 2006" .start_date }} to {{ dateFormat "January 2006" .end_date }} {{ end }}) {{ if isset . "exurl" }}&nbsp;<a href="{{ .exurl }}" class="is-smaller"><i class="fas fa-link fa-fw"></i></a>{{ end }}
+<i class="fa-li fas fa-hand-point-right fa-fw"></i>   <strong>{{ .description }}</strong>, {{ .source }} ({{if isset . "date" }}{{ dateFormat "January 2006" .date }}{{ end }} {{if isset . "start_date" }}{{ dateFormat "January 2006" .start_date }} to {{ dateFormat "January 2006" .end_date }} {{ end }}) {{ if isset . "exurl" }}&nbsp;<a href="{{ .exurl }}" class="is-smaller"><i class="fas fa-link fa-fw"></i></a>{{ end }}
 
 {{ end }}
 
