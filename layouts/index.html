@@ -46,14 +46,14 @@
             <h2 class="is-center">Recent Works</h2>
           </div>
           <ul class="compact fa-ul">
-            {{ with .Site.Data }}
-              {{ $works := (merge (merge (merge .Site.Data.papers .Site.Data.presentations) .Site.Data.courses) .Site.Data.software) }}
+            {{ with .Site.Data.papers }}
+              {{ $works := merge (merge (merge $.Site.Data.papers $.Site.Data.presentations) $.Site.Data.courses) $.Site.Data.software }}
               {{ range first 10 (sort $works "date" "desc")  }}
                 {{ if not .exclude_latest }}
                   {{ partial "work.html" .}}
                 {{ end }}
               {{ end }}
-            {{end}}  
+            {{end}}
             </ul>
           <footer class="group">
             <p class="is-text-right is-big"><a href="vitae">All Works&nbsp;<span class="pointer">1</span></a></p>
