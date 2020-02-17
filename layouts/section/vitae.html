@@ -77,6 +77,8 @@
           {{ range sort .Site.Data.papers "date" "desc" }}
             {{ partial "work.html" .}}
           {{ end }}
+        </ul>
+
         <h2>Service</h2>
         <ul class="fa-ul">
          {{ range sort .Site.Data.service "start_date" "desc" }}
@@ -84,7 +86,6 @@
          {{ end }}
        </ul>
 
-        </ul>
       </div>
 
       <div class="is-col is-10 is-hidden-print">&nbsp;</div>
