@@ -1,11 +1,10 @@
+<!DOCTYPE html>
+<html>
 {{ $asset_base := .Site.BaseURL }}
 {{ if ne (getenv "HUGO_ASSET_BASEURL") "" }}
   {{ $asset_base = (getenv "HUGO_ASSET_BASEURL") }}
 {{ end }}
-<!DOCTYPE html>
-<html>
 {{ partial "head.html" . }}
-<body>
   {{ partial "navbar.html" . }}
   <div class="wrapper">
     <div class="is-row is-stack-40">
@@ -61,7 +60,6 @@
         </div>
       </div>
     </div>
- </div>
 {{ partial "footer.html" . }}
 </body>
 </html>
